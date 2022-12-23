@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,85 +8,189 @@
     <link rel="stylesheet" href="style.css">
     <title>Resume Generator</title>
 </head>
+
 <body>
-    <div class="container">
- 
-   
-    <h1 class="h1">
-        Resume Generator
-    </h1>
-    <h3 class="h3">
-        Resume Generator
-    </h1>
-</div>
-<div class="container-fluid">
-    <div class="col-left">
-        <h3>
-           Personal Information
-        </h3>
-        <div class="basic-personal-info">
-            <div class="elment">
-            <label  for="name">Name</label> <br>
-            <input type="text" class="input" id="name" name="name">
-        </div>
 
-            <div class="elment">
-            <label  for="name">Phone</label> <br>
-            <input type="number" class="input" id="phone" name="phone">
+
+    <div id="cv-form">
+
+
+        <div class="container">
+
+
+            <h1 class="h1">
+                Resume Generator
+            </h1>
+            <h3 class="h3">
+                Resume Generator
+                </h1>
         </div>
-            <div class="elment">
-            <label  for="email">Email  </label> <br>
-            <input type="email" class="input" id="email" name="email">
-        </div>
-            <div class="elment">
-            <label  for="address">Address  </label> <br>
-           
-            <textarea name="address" id="address"   rows="3"></textarea>
-        </div>
-        </div>
-        <div class="important-link">
-            <h4>important links </h4>
-            <div class="elment">
-                <label  for="name">Facebook</label> <br>
-                <input type="text" class="input" id="facebook" name="facebook">
+        <div class="container-fluid">
+            <div class="col-left">
+                <h3>
+                    Personal Information
+                </h3>
+                <div class="basic-personal-info">
+                    <div class="elment">
+                        <label for="name">Name</label> <br>
+                        <input type="text" class="input" id="name" name="name">
+                    </div>
+
+                    <div class="elment">
+                        <label for="name">Phone</label> <br>
+                        <input type="number" class="input" id="phone" name="phone">
+                    </div>
+                    <div class="elment">
+                        <label for="email">Email </label> <br>
+                        <input type="email" class="input" id="email" name="email">
+                    </div>
+                    <div class="elment">
+                        <label for="address">Address </label> <br>
+
+                        <textarea name="address" id="address" rows="3"></textarea>
+                    </div>
+                </div>
+
+                <div class="important-link">
+                    <h5>Social links </h5>
+                    <div class="elment">
+                        <label for="name">Facebook</label> <br>
+                        <input type="text" class="input" id="facebook" name="facebook">
+                    </div>
+                    <div class="elment">
+                        <label for="name">Twitter</label> <br>
+                        <input type="text" class="input" id="twitter" name="twitter">
+                    </div>
+                    <div class="elment">
+                        <label for="name">Linkdlen</label> <br>
+                        <input type="text" class="input" id="linkdlen" name="linkdlen">
+                    </div>
+                </div>
             </div>
-            <div class="elment">
-                <label  for="name">Instagram</label> <br>
-                <input type="text" class="input" id="instagram" name="instagram">
+            <div class="col-Right">
+                <h3>
+                    Proffessionals Information
+                </h3>
+                <div class="basic-proffessional-info">
+                    <div class="elment">
+                        <label for="address">Objective </label> <br>
+
+                        <textarea name="obj" id="obj" rows="3"></textarea>
+                    </div>
+
+                    <div class="elment" id="we">
+                        <label for="WE">Work Experience </label> <br>
+
+                        <textarea name="WE" class="WE" rows="3"></textarea>
+                        <div class="Addsubmit" id="AddbtnWE">
+
+                            <button onclick="GenerateNewWE()" class="Addbtn">Add</button>
+                        </div>
+                    </div>
+
+                    <div class="elment" id="aq">
+                        <label for="AQ"> Academic Qualification </label> <br>
+
+                        <textarea name="AQ" class="AQ" rows="3"></textarea>
+                        <div class="Addsubmit" id="AddbtnAQ">
+
+                            <button onclick="GenerateNewAQ()" class="Addbtn">Add</button>
+                        </div>
+                    </div>
+                    <div class="elment" id="skill">
+                        <label for="skills">Skills </label> <br>
+
+                        <textarea name="WE" class="skill" rows="3"></textarea>
+                        <div class="Addsubmit" id="AddbtnSkill">
+
+                            <button onclick="GenerateNewSkill()" class="Addbtn">Add</button>
+                        </div>
+                    </div>
+                    <div class="elment" id="project">
+                        <label for="project">Project </label> <br>
+
+                        <textarea name="WE" class="project" rows="3"></textarea>
+                        <div class="Addsubmit" id="AddbtnProject">
+
+                            <button onclick="GenerateNewProject()" class="Addbtn">Add</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="elment">
-                <label  for="name">Linkdlen</label> <br>
-                <input type="text" class="input" id="linkdlen" name="linkdlen">
+        </div>
+        <div class="submit">
+            <button onclick="GenerateCV()" class="btn">Generate CV</button>
+
+        </div>
+    </div>
+
+    <div id="templete-form">
+        <div class="container-fluid">
+
+
+            <div class="temp-col-left">
+                <div class="pinfo">
+                    <img src="https://toppng.com/uploads/preview/instagram-default-profile-picture-11562973083brycehrmyv.png"
+                        class="my-img" alt="">
+                    <div class="temp-personal-info">
+
+                        <p id="nameT">Kishore Kumar</p>
+                        <p id="phoneT">+923442382394</p>
+                        <p id="emailT">kishorejaipal477@gmail.com</p>
+                        <p id="addressT">Korangi Crossing Karachi, sindh , Pakistan</p>
+
+
+                    </div>
+                </div>
+                <hr>
+                <p class="skills"><b>Skills</b> </p>
+                <ul id="SkillT"></ul>
+                <div class="social">
+                    <p><a id="fbT" class="socialElm" target="_blank" href="#1">
+                            <img class="socialImg" src="/facebook.png" alt="">
+                        </a></p>
+                    <p><a id="lkT" class="socialElm" target="_blank" href="#2">
+                            <img class="socialImg" src="/LinkedIn.png" alt="">
+                        </a></p>
+                    <p><a id="twT" class="socialElm" target="_blank" href="#3">
+                            <img class="socialImg" src="/twitter.png" alt="">
+
+                        </a></p>
+                </div>
+            </div>
+            <div class="temp-col-right">
+                <h1 id="nameT1"> </h1>
+                <!-- Objective section -->
+                <div class="section">
+                    <h4>Objective</h4>
+                    <p id="objT"> </p>
+                </div>
+                <!-- work Experience -->
+                <div class="section">
+                    <h4>Work Experience</h4>
+                    <ul id="WET">  </ul>
+
+                </div>
+                <!-- Educational qualification -->
+                <div class="section">
+                    <h4>Educational Qualification</h4>
+                    <ul id="AQT"></ul>
+
+                </div>
+                <div class="section">
+                    <h4>Projects</h4>
+                    <ul id="projectT"></ul>
+
+                </div>
+               
             </div>
         </div>
     </div>
-    <div class="col-Right">
-        <h3>
-            Proffessionals Information
-         </h3>
-         <div class="basic-proffessional-info">
-            <div class="elment">
-                <label  for="address">Objective  </label> <br>
-               
-                <textarea name="address" id="address"   rows="3"></textarea>
-            </div>
+    <div class="print" id="removebtn">
 
-            <div class="elment">
-                <label  for="address">Work Experience  </label> <br>
-               
-                <textarea name="address" id="address"   rows="3"></textarea>
-            </div>
-            <div class="elment">
-                <label  for="address">Qualification  </label> <br>
-               
-                <textarea name="address" id="address"   rows="3"></textarea>
-            </div>
-        </div>
+        <button onclick="PrintCV()" class="btn">Print CV </button>
     </div>
-</div>
-<div class="submit">
-    <button class="btn" >Generate CV</button>
-
-</div>
+    <script src="index.js"></script>
 </body>
+
 </html>

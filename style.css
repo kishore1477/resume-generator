@@ -1,7 +1,10 @@
 .container{
     width: 50%;
     margin: auto;
-    /* background-color: red; */
+     
+}
+#cv-form{
+    display: block;
 }
 .h3{
     text-align: center;
@@ -86,6 +89,82 @@ label{
     margin: auto;
     text-align: center;
 }
+.Addsubmit{
+    width: 80%;
+    
+    text-align: center;
+}
+.Addbtn{
+    text-align: center;
+    padding: 4px 8px 4px;
+    cursor: pointer;
+    background-color: rgb(123, 123, 185);
+    border-radius: 4px;
+    border: none;
+}
+
+/* Templete css code */
+#templete-form{
+    display: none;
+}
+.temp-col-left{
+    width: 40%;
+    background-color: aqua;
+    height: 100%;
+    /* margin: auto; */
+   
+   
+}
+.pinfo{
+    text-align: center;
+}
+.skills{
+    margin-left: 8px;
+    font-weight: 500;
+}
+.temp-col-right{
+    width: 60%;
+    
+    height: 100%;
+}
+.my-img{
+    width: 40%;
+    height: 200px;
+    margin-top: 6px;
+}
+h1{
+    text-align: center;
+}
+.section{
+   margin-left: 8px;
+}
+h4{
+    background-color: aqua;
+    font-weight: 300px;
+    padding: 16px;
+    border-radius: 6px;
+}
+p{
+    margin-top: 8px;
+}
+.print{
+    text-align: center;
+    margin-top: 34px;
+    display: none;
+}
+.social{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.socialImg{
+    width: 50px;
+    height: 50px;
+}
+.socialElm{
+    margin: 16px;
+}
 @media  only screen and (min-width: 270px) and (max-width: 820px) {
     h2{
         text-align: center;
@@ -155,3 +234,6 @@ label{
         display: none;
     }
 }
+@media print {
+    body {-webkit-print-color-adjust: exact;}
+    }
