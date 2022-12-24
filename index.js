@@ -38,7 +38,8 @@ function GenerateNewProject() {
 function GenerateCV() {
     let cv = document.getElementById('cv-form');
     let tmplt = document.getElementById('templete-form')
-    var prnt =  document.getElementsByClassName('print')
+    let prnt =  document.getElementById('print')
+    
     prnt.style.display = 'block'
     cv.style.display = 'none'
     tmplt.style.display = 'block'
@@ -52,6 +53,16 @@ function GenerateCV() {
     document.getElementById('twT').href = document.getElementById('twitter').value
     document.getElementById('objT').innerHTML  = document.getElementById('obj').value
 
+    // file 
+    let file  = document.getElementById('pic').files[0]
+console.log("file", file)
+    let reader = new FileReader()
+    reader.readAsDataURL(file)
+    console.log(reader.result)
+    reader.onloadend = function(){
+      document.getElementById('imgT').src = reader.result 
+
+    }
 
     // Work Exprience
     let workExp = document.getElementsByClassName('WE')
@@ -94,12 +105,15 @@ str = str + `<li>${e.value}</li>`;
     document.getElementById('projectT').innerHTML = strProject
 }
 function PrintCV() {
-//     var   Tdata = document.getElementById('totalData').innerHTML
-// var   data = document.getElementById('data').innerHTML
-// document.getElementById('totalData').innerHTML = data
-var td = document.body
-var d = document.getElementById('removebtn').innerHTML
-document.body = d
+    // var   Tdata = document.getElementById('content').innerHTML
+var   data = document.getElementById('print')   
+data.style.display = 'none'
+let title =  document.getElementById('title')
+    title.style.display = 'none'
+// document.getElementById('content').innerHTML = data
+// var td = document.body
+// var d = document.getElementById('print').innerHTML
+// document.body = d
     window.print()
     
 }

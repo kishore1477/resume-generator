@@ -5,25 +5,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <title>Resume Generator</title>
+    <title id="title">Resume Generator</title>
 </head>
 
 <body>
 
+ <div id="content">
+    
 
     <div id="cv-form">
 
 
         <div class="container">
 
-
-            <h1 class="h1">
-                Resume Generator
-            </h1>
-            <h3 class="h3">
-                Resume Generator
-                </h1>
+<div class="h1">
+    <h1 >
+        Resume Generator 
+    </h1>
+    <span>By Kishore Kumar</span>
+</div>
+           <div class="h3"> 
+            <h3 >
+                Resume Generator  
+               
+                </h3>
+                <span>By Kishore Kumar</span>
+            </div>
         </div>
         <div class="container-fluid">
             <div class="col-left">
@@ -48,6 +57,11 @@
                         <label for="address">Address </label> <br>
 
                         <textarea name="address" id="address" rows="3"></textarea>
+                    </div>
+                    <div class="elment">
+                        <label for="pic">Profile Picture </label> <br>
+                        <input type="file" class="input" id="pic" name="pic">
+                        
                     </div>
                 </div>
 
@@ -130,7 +144,7 @@
 
             <div class="temp-col-left">
                 <div class="pinfo">
-                    <img src="https://toppng.com/uploads/preview/instagram-default-profile-picture-11562973083brycehrmyv.png"
+                    <img id="imgT" src="https://toppng.com/uploads/preview/instagram-default-profile-picture-11562973083brycehrmyv.png"
                         class="my-img" alt="">
                     <div class="temp-personal-info">
 
@@ -186,10 +200,12 @@
             </div>
         </div>
     </div>
-    <div class="print" id="removebtn">
+
+    <div class="print" id="print">
 
         <button onclick="PrintCV()" class="btn">Print CV </button>
     </div>
+</div>
     <script src="index.js"></script>
 </body>
 
